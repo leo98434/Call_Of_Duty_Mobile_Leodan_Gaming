@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call of Duty Mobile - LeodanGaming</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+</head>
+<body>
+    <header class="bg-dark text-white text-center p-4">
+        <div class="container">
+            <img src="images/leodangaming_logo.png" alt="LeodanGaming Logo" class="mb-3" id="logo">
+            <h1>LeodanGaming</h1>
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link text-white" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#noticias">Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#guia">Guías</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#videos">Videos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <!-- Sección de portada -->
+        <section id="inicio" class="text-center mb-4">
+            <h2>Bienvenido a Call of Duty Mobile</h2>
+            <p>¡Todo lo que necesitas saber sobre Call of Duty Mobile!</p>
+            <img src="images/portada_cod_mobile.jpg" alt="Call of Duty Mobile" class="img-fluid">
+        </section>
+
+        <!-- Login -->
+        <section id="login" class="text-center mb-4">
+            <h2>Iniciar Sesión</h2>
+            <p>Accede a tu cuenta para disfrutar de más funcionalidades.</p>
+            <button id="google-login" class="btn btn-danger mb-2">Iniciar sesión con Google</button>
+            <button id="facebook-login" class="btn btn-primary mb-2">Iniciar sesión con Facebook</button>
+            <br>
+        </section>
+
+        <!-- Noticias -->
+        <section id="noticias" class="mb-4">
+            <h2>Últimas Noticias</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <article class="card mb-4">
+                        <img src="images/temporada9.jpg" class="card-img-top" alt="Temporada 9">
+                        <div class="card-body">
+                            <h3 class="card-title">Actualización de Temporada 9</h3>
+                            <p class="card-text">La temporada 9 trae nuevas armas, mapas y eventos especiales. ¡Descubre todo lo que necesitas saber sobre esta emocionante actualización!</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6">
+                    <article class="card mb-4">
+                        <img src="images/halloween_event.jpg" class="card-img-top" alt="Eventos de Halloween">
+                        <div class="card-body">
+                            <h3 class="card-title">Eventos de Halloween</h3>
+                            <p class="card-text">¡Participa en los eventos especiales de Halloween y gana recompensas exclusivas! Hay misiones diarias y desafíos para todos los jugadores.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guías y Estrategias -->
+        <section id="guia" class="mb-4">
+            <h2>Guías y Estrategias</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="images/mejores_armas.jpg" class="card-img-top" alt="Mejores Armas">
+                        <div class="card-body">
+                            <h3 class="card-title">Mejores Armas del Meta</h3>
+                            <p class="card-text">Conoce las armas más efectivas de la temporada actual. La KRM-262 y la ASM10 dominan el campo de batalla, descubre por qué.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="images/tacticas_mapas.jpg" class="card-img-top" alt="Tácticas en Mapas">
+                        <div class="card-body">
+                            <h3 class="card-title">Tácticas en Mapas Clave</h3>
+                            <p class="card-text">Aprende las mejores tácticas para dominar los mapas más populares. Conoce los puntos de respawn y las rutas de flanqueo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eventos de COD Mobile -->
+        <section id="eventos" class="mb-4">
+            <h2>Eventos de COD Mobile</h2>
+            <p>Participa en los eventos exclusivos de la comunidad y compite para obtener increíbles recompensas.</p>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="mb-4">
+            <h2>Contacto</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2024 LeodanGaming. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
